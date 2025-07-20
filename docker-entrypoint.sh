@@ -7,6 +7,7 @@ if [ ! -f Gemfile ]; then
   echo "Be sure you're in your jekyll site root and use something like this to launch"
   echo ""
   echo "docker run -p 4040:4040 -v \$(pwd):/site thr3d33/jekyll-serve"
+  exit 1
 fi
 
 bundle install --retry 5 --jobs 20
