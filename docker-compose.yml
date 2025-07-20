@@ -1,8 +1,7 @@
-# no version needed since 2020
-
+---
 services:
   jekyll:
-    image: bretfisher/jekyll-serve
+    image: thr3d33/jekyll-serve
     volumes:
       - .:/site
     ports:
