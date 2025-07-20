@@ -1,4 +1,4 @@
-FROM ruby:3.1-slim-bullseye as jekyll
+FROM ruby:3.1-slim-bullseye AS jekyll
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     git \
@@ -11,7 +11,7 @@ WORKDIR /site
 ENTRYPOINT [ "jekyll" ]
 CMD [ "--help" ]
 # build from the image we just built with different metadata
-FROM jekyll as jekyll-serve
+FROM jekyll AS jekyll-serve
 # on every container start, check if Gemfile exists and warn if it's missing
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4040", ]
