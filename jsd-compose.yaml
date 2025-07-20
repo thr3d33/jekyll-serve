@@ -4,4 +4,4 @@ services:
     volumes:
       - .:/site
     ports:
-      - '4000:4000'
+      - '4040:4040'

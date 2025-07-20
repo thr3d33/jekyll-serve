@@ -6,12 +6,7 @@ if [ ! -f Gemfile ]; then
   echo "Either you didn't mount a volume, or you mounted it incorrectly."
   echo "Be sure you're in your jekyll site root and use something like this to launch"
   echo ""
-  echo "docker run -p 4000:4000 -v \$(pwd):/site thr3d33/jekyll-serve"
-  echo ""
-  echo "NOTE: To create a new site, you can use the sister image thr3d33/jekyll like:"
-  echo ""
-  echo "docker run -v \$(pwd):/site thr3d33/jekyll new ."
-  exit 1
+  echo "docker run -p 4040:4040 -v \$(pwd):/site thr3d33/jekyll-serve"
 fi
 
 bundle install --retry 5 --jobs 20
