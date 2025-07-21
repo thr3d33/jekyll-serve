@@ -1,4 +1,4 @@
-## Jekyll Serve w/Drafts
+## Jekyll Serve
 Fork from Bret Fisher. <br>
 Development image for jekyll. <br>
 Using:
